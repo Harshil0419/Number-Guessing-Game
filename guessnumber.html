@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="guessnumber.css">
+</head>
+
+<body>
+    <h1>Guess The Number</h1>
+
+    <p>Guess the Number between 1 to 10:</p>
+
+    <input type="text" id="userGuess">
+
+    <button onclick="checkGuess()">Submit Guess</button>
+
+    <div id="secretNumber"></div>
+    <div id="result"></div>
+    <script>
+        // Generate random number 1 to 10
+        var secretNumber = Math.floor(Math.random() * 10) + 1;
+
+        function checkGuess(){
+        
+        // Get user guess
+        var userGuess = document.getElementById("userGuess").value;
+
+        // Convert user output into a number using unary plus
+        var guess = +userGuess;
+
+        // Check if input is a valid number
+        if (!isNaN(guess)) {
+        
+        // Provide feedback to user
+        if ( guess===secretNumber) {
+        document.getElementById("secretNumber").innerHTML = secretNumber;
+        document.getElementById("result").innerHTML = "Congratulations! You Guessed The Correct Number!";
+        }else if(guess < secretNumber){
+        document.getElementById("secretNumber").innerHTML = secretNumber;
+        document.getElementById("result").innerHTML = "Too Low. Try Again!";
+        }else{
+        document.getElementById("secretNumber").innerHTML = secretNumber;
+        document.getElementById("result").innerHTML = "Too High. Try Again!";
+        }
+        }
+        else{
+            //Display an error message if input not and valid number
+            document.getElementById("result").innerHTML = "Input Invalid. Please enter a valid number";
+        }
+
+        }         
+    </script>
+
+
+
+</body>
+
+
+</html>

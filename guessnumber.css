@@ -1,0 +1,29 @@
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-image:url("https://construct-static.com/uploads/195552/eae7fd38-b155-4635-9d6b-f506422f0043 /guess-the-number-small.jpg");
+    background-size: cover;
+}
+
+h1{
+    background-color: blue;
+    color: white;
+}
+
+p{
+    font-size: 50px;
+}
+
+#result{
+    margin-top: 20px;
+    font-size: 40px;
+    background-color: white;
+    color: red;
+}
+#secretNumber{
+    margin-top: 20px;
+    font-size: 40px;
+    background-color: white;
+    color: green;
+}
